@@ -1,0 +1,63 @@
+@use '../custom' as *;
+@use '../mixin' as *;
+
+#skills {
+  padding-block: $padding-section;
+  background-color: $dark-100;
+
+  .title::before {
+    content: 'My Skills';
+  }
+
+  .progress {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    background-color: $dark-300;
+    overflow: visible;
+    transition: 1s;
+
+    .active-progress {
+      height: 100%;
+      background-color: $main-color;
+      position: relative;
+      border-radius: 5px 0 0 5px;
+      transition: 1s;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -100%;
+        border-width: 20px;
+        border-style: solid;
+        border-color: rgba($color: $main-color, $alpha: 0.8) transparent transparent transparent;
+      }
+
+      &::after {
+        // content: '90%';
+        content: attr(data-progress);
+        color: $light-100;
+        font-weight: 500;
+        font-size: 15px;
+        @include centerDiv;
+        position: absolute;
+        width: 40px;
+        height: 30px;
+        right: 0;
+        top: calc(-100% - 30px);
+        background-color: rgba($color: $main-color, $alpha: 0.8);
+      }
+    }
+
+
+
+  }
+
+  h3 {
+    color: $light-100;
+    font-weight: 400;
+    font-size: 20px;
+    margin-block-end: 20px;
+  }
+}

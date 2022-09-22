@@ -1,0 +1,32 @@
+@use '../custom' as *;
+@use '../mixin' as *;
+
+#what {
+  padding-block: $padding-section;
+  background-color: $dark-200;
+
+  .title::before {
+    content: 'what i do';
+  }
+}
+
+.box {
+  background-color: $dark-100;
+  padding-block: 40px;
+  text-align: center;
+  @include centerDiv;
+  flex-direction: column;
+
+  i {
+    font-size: 30px;
+    margin-block-end: 20px;
+    color: $main-color;
+  }
+
+  p {
+    font-size: 20px;
+    margin: 0;
+    color: $light-100;
+    text-transform: capitalize;
+  }
+}

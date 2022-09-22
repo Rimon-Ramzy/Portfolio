@@ -1,0 +1,24 @@
+@use '../custom' as *;
+@use '../mixin' as *;
+
+#contact {
+  padding-block: $padding-section;
+  background-color: $dark-200;
+
+  .title::before {
+    content: 'contact me';
+    font-size: 50px;
+  }
+
+  button {
+    color: $light-100;
+    background-color: $main-color;
+    margin-block-start: 20px;
+    border: 2px solid transparent;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $main-color;
+    }
+  }
+}

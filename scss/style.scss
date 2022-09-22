@@ -1,0 +1,41 @@
+@use 'custom' as *;
+@use 'sections/header';
+@use 'sections/what';
+@use 'sections/skills';
+@use 'sections/about';
+@use 'sections/projects';
+@use 'sections/contact';
+@use 'sections/footer';
+
+.title {
+  color: $light-100;
+  text-transform: capitalize;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  padding-block: 50px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    text-transform: uppercase;
+    color: $dark-300;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    font-size: 70px;
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10%;
+    height: 2px;
+    background-color: $main-color;
+  }
+}

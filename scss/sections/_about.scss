@@ -1,0 +1,56 @@
+@use '../custom' as *;
+@use '../mixin' as *;
+
+#about {
+  padding-block: $padding-section;
+  background-color: $dark-100;
+
+  .title::before {
+    content: 'about me';
+  }
+
+  .box {
+    width: 80%;
+    background-color: $dark-300;
+    margin: 0 auto;
+    padding: 30px 40px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid $main-color;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-inline-end: 30px;
+    }
+
+    .info {
+      h4 {
+        font-size: 16px;
+        font-weight: 500;
+        text-align: start;
+        color: $light-100;
+
+        span {
+          color: $main-color;
+        }
+      }
+    }
+
+    .contact {
+      font-size: 20px;
+      font-size: 20px;
+      margin-block-start: 30px;
+    }
+  }
+}

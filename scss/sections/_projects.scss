@@ -1,0 +1,41 @@
+@use '../custom' as *;
+@use '../mixin' as *;
+
+#projects {
+  padding-block: $padding-section;
+  background-color: $dark-100;
+
+  .title::before {
+    content: 'Featured projects';
+    font-size: 50px;
+  }
+
+  .info {
+    font-size: 19px;
+    font-weight: 500;
+    color: $light-100;
+  }
+
+  .card {
+    background-color: $dark-300;
+    width: 100% !important;
+
+    .card-title {
+      color: $main-color;
+    }
+
+    .card-text {
+      color: $light-100;
+    }
+
+    .live {
+      background-color: $main-color;
+      color: $light-100;
+    }
+
+    .repo {
+      border: 2px solid $main-color;
+      color: white;
+    }
+  }
+}
